@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=entrevistaMagnum
+    username: entrvista
+    password: magnum
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.SQLServerDialect
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: true
+
+
+fipe-api:
+  url:
+    marcas: https://parallelum.com.br/fipe/api/v1/carros
+    modelos: https://parallelum.com.br/fipe/api/v1/carros/marcas/59
+
+server:
+  port: 8090
